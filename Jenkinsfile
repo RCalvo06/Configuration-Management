@@ -34,8 +34,9 @@ pipeline {
                 branch "Dev"
             } */
             steps {
-                dir('C:/Dev/IaC-DevOps-Challenge') {
-                powershell 'terraform plan'
+                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management
+') {
+                sh 'terraform plan'
                 echo "final"   
                 }
                        
@@ -47,8 +48,8 @@ pipeline {
                 branch "main"
             }
             steps {
-                dir('C:/Dev/IaC-DevOps-Challenge') {
-                powershell 'terraform apply --auto-approve'
+                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
+                sh 'terraform apply --auto-approve'
                 }
                 
                        
@@ -62,10 +63,10 @@ pipeline {
             }
             steps {
 
-                powershell 'sleep 300'
+                sh 'sleep 300'
 
-                dir('C:/Dev/IaC-DevOps-Challenge') {
-                powershell 'terraform destroy --auto-approve'
+                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
+                sh 'terraform destroy --auto-approve'
                 }
                 
                        
