@@ -34,8 +34,7 @@ pipeline {
                 branch "Dev"
             } */
             steps {
-                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management
-') {
+                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
                 sh 'terraform plan'
                 echo "final"   
                 }
