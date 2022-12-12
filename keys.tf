@@ -1,0 +1,4 @@
+resource "aws_key_pair" "cm_keypair" {
+  key_name   = "devops"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCdFTOfOQa6CKzqy4/89/DmuMEaZ2nmXqZZZiODuvuPY3FDPY51ZNe+cXQsPFsikB+/qd7xayo7citrwW9HLXWpMs39OjqP6y0ERgkCcOkh4O7MXGeUaqwgp/VPqBi/JSpCJRceH4lqqOnVkmLn1X6HTcOctx0k0u8OpP+rolaCeEEIxUXa1rzzp56bT0NEJafZPpG66yobArHwN3a9EpW91kfoNuZmzH6Ec/N/6toyOjik38bKA9++7Y/FU7dYe7U1eo1n/v8mkW031Dr9HpV4g31TS37nih0l0Msro7SVMEgGdZUNP3inltNqgCdxBZKnTpeTQu8NCGB8nRzIEzxtAd/une0c8dDCuZZtjYPCofIYSJRDtfYohfLQM0CEff4+5ETgN3mZDF3llxn7lVCRK6QCQhrpxJj0oMFuNLpfQ6pon4mhKivlQiR7GQPvBoLK+86Xc5XSdgSK5n+JMbJmybw86Vs5nvrOpwYSRFyBep/clVsJGtoARTTuufvPv3k= ubuntu-baselocal@ansible-master.local"
+}

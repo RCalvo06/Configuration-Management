@@ -1,0 +1,11 @@
+---
+- name: Play to create and install Apache
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Task to Install Apache
+    apt:
+      name: apache2
+      state: present
+
