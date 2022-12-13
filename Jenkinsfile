@@ -36,12 +36,12 @@ pipeline {
             steps {
                 dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
                 sh 'terraform plan'
-                echo "final"   
+                echo "final"
                 }
                        
             }
         }
-/*Test2*/
+
         stage('Terraform apply') {
             when{
                 branch "main"
