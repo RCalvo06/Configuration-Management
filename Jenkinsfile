@@ -35,7 +35,7 @@ pipeline {
             } */
             steps {
                 dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
-                sh 'terraform plan'
+                sh 'terraform plan -lock=false'
                 echo "final"
                 }
                        
@@ -48,7 +48,7 @@ pipeline {
             }
             steps {
                 dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
-                sh 'terraform apply --auto-approve'
+                sh 'terraform apply -lock=false --auto-approve'
                 }
                 
                        
@@ -65,7 +65,7 @@ pipeline {
                 sh 'sleep 300'
 
                 dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
-                sh 'terraform destroy --auto-approve'
+                sh 'terraform destroy -lock=false --auto-approve'
                 }
                 
                        
