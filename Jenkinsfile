@@ -34,21 +34,21 @@ pipeline {
                 branch "Dev"
             } */
             steps {
-                dir('C:/Dev/IaC-DevOps-Challenge') {
-                powershell 'terraform plan'
-                echo "final"   
+                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
+                sh 'terraform plan -lock=false'
+                echo "final"
                 }
                        
             }
         }
-/*Test2*/
+
         stage('Terraform apply') {
             when{
                 branch "main"
             }
             steps {
-                dir('C:/Dev/IaC-DevOps-Challenge') {
-                powershell 'terraform apply --auto-approve'
+                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
+                sh 'terraform apply -lock=false --auto-approve'
                 }
                 
                        
@@ -62,10 +62,10 @@ pipeline {
             }
             steps {
 
-                powershell 'sleep 300'
+                sh 'sleep 300'
 
-                dir('C:/Dev/IaC-DevOps-Challenge') {
-                powershell 'terraform destroy --auto-approve'
+                dir('/home/ubuntu-baselocal/curso-ansible/dev/Configuration-Management') {
+                sh 'terraform destroy -lock=false --auto-approve'
                 }
                 
                        
