@@ -48,6 +48,7 @@ resource "aws_security_group" "apache" {
 /* Instance  y provisioning */
 
 
+
 resource "aws_instance" "apache" {
   ami             = local.ami_id
   instance_type   = local.instance_type
@@ -65,6 +66,8 @@ resource "aws_instance" "apache" {
     }
 
   }
+
+
 
   provisioner "local-exec" {
     command = "ansible-playbook -i ${aws_instance.apache.public_ip}, --private-key ${local.private_key_path} apache.yml"
