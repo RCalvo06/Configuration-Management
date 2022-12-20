@@ -66,7 +66,7 @@ resource "aws_instance" "apache" {
     }
 
   }
-
+// test 2
 
 
   provisioner "local-exec" {
