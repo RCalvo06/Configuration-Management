@@ -47,7 +47,7 @@ resource "aws_security_group" "apache" {
 
 /* Instance  y provisioning */
 
-
+// test 
 
 resource "aws_instance" "apache" {
   ami             = local.ami_id
@@ -66,7 +66,7 @@ resource "aws_instance" "apache" {
     }
 
   }
-
+// test 2
 
 
   provisioner "local-exec" {
